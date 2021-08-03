@@ -1,0 +1,9 @@
+.img-product{
+    height: 285px;
+    padding: 0% 15% 0% 15%;
+    transition: 0.3s ease-in-out;
+}
+.img-product:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}

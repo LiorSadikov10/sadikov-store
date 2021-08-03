@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 style="text-align: center;" class="display-5">Hot Product</h1>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let item of productsList">
+                <div class="card">
+                    <img src="{{ item.image }}" class="card-img-top img-product" alt="product">
+                    <div class="card-body">
+                        <h5 class="card-title" style="white-space:nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 50ch;">{{ item.title }}</h5>
+                        <p class="card-text" style="white-space:nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 150ch;">{{ item.description }}</p>
+                        <h6>${{ item.price }}</h6>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
