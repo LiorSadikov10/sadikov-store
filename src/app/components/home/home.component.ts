@@ -13,10 +13,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private api: ApiService, private CartService: CartService) { }
 
+  totalLength:any;
+  page:number = 1;
+
   ngOnInit(): void {
     this.api.getProducts().subscribe(res=>{
       this.productsList = res;
-
+      this.totalLength = res.length;
       this.productsList.forEach((a:any)=>{
         Object.assign(a,{quantity:1,total:a.price});
       })

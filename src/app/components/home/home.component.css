@@ -12,3 +12,6 @@
     display: block;
     position: fixed;
 }
+.my-pagination /deep/ .ngx-pagination .current {
+    background: rgb(29, 29, 29);
+  }

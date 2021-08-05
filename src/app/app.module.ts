@@ -8,6 +8,9 @@ import { HomeComponent } from './components/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
+import { FormsModule} from '@angular/forms';
+
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
