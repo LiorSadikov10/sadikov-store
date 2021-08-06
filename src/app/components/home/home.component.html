@@ -1,7 +1,8 @@
 <div class="container">
-    <h1 style="text-align: center;" class="display-5">Hot Products</h1>
+    <input class="form-control me-2 align-items-center" [(ngModel)]="term" type="text" placeholder="Search" aria-label="Search" >
+    <h1 style="text-align: center;" class="display-5">Top Products</h1>
     <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col" *ngFor="let item of productsList | paginate: { itemsPerPage: 4, currentPage: page, totalItems:totalLength }">
+        <div class="col" *ngFor="let item of productsList | filter:term | paginate: { itemsPerPage: 4, currentPage: page, totalItems:totalLength }">
                 <div class="card">
                     <img src="{{ item.image }}" class="card-img-top img-product" alt="product">
                     <div class="card-body dark">
@@ -15,3 +16,4 @@
     </div><br>
     <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
 </div>
+<app-header></app-header>

@@ -11,20 +11,29 @@ import { CartComponent } from './components/cart/cart.component';
 import { FormsModule} from '@angular/forms';
 
 import {NgxPaginationModule} from 'ngx-pagination';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ThanksComponent } from './components/thanks/thanks.component';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent,
+    ThanksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
